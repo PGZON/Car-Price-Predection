@@ -1,0 +1,10 @@
+/* Center the logo and add border
+.logo {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid #333;
+    padding: 5px;
+    width: 100%; /* Ensures the image fills its container *
+    max-width: 200px; /* Limit maximum width to prevent excessive scaling *
+    height: auto; /* Maintains aspect ratio *
+} */
