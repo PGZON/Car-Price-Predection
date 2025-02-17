@@ -60,4 +60,8 @@ def predict():
         return render_template("home.html", compny=compny, fuel_type=fuel_type, years=years, result_data=result_data)
     except Exception as e:
         return f"An error occurred: {e}", 500
+    
+# if __name__ == "__main__":
+#     app.debug=True
+
     #Done
