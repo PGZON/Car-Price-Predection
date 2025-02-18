@@ -2,6 +2,9 @@ import streamlit as st
 from flask import Flask, render_template, request, jsonify
 import pandas as pd
 import pickle as pk
+import warnings
+
+warnings.filterwarnings("ignore")
 
 app = Flask(__name__)
 
@@ -63,7 +66,7 @@ def predict():
         return f"An error occurred: {e}", 500
 
 if __name__ == '__main__':
-    app.run(port=5001)  # Change the port number to avoid conflicts
+    app.run(port=5002, debug=True)  # Change the port number to avoid conflicts and enable debug mode
 
 # Streamlit code to interact with the Flask app
 st.title('Car Price Prediction')
