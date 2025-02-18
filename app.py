@@ -63,7 +63,7 @@ def predict():
         return f"An error occurred: {e}", 500
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=5001)  # Change the port number to avoid conflicts
 
 # Streamlit code to interact with the Flask app
 st.title('Car Price Prediction')
