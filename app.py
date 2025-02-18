@@ -1,7 +1,8 @@
+import streamlit as st
 from flask import Flask, render_template, request, jsonify
 import pandas as pd
 import pickle as pk
-#    hdhdh
+
 app = Flask(__name__)
 
 try:
@@ -17,7 +18,7 @@ def fun():
     compny = sorted(read_file['company'].unique())
     fuel_type = sorted(read_file['fuel_type'].unique())
     return render_template("home.html", compny=compny, fuel_type=fuel_type)
-#    kgfgbadfiugdf
+
 @app.route("/about")
 def about():
     return render_template("about.html")
@@ -60,8 +61,12 @@ def predict():
         return render_template("home.html", compny=compny, fuel_type=fuel_type, years=years, result_data=result_data)
     except Exception as e:
         return f"An error occurred: {e}", 500
-    
-# if __name__ == "__main__":
-#     app.debug=True
 
-    #Done
+if __name__ == '__main__':
+    app.run()
+
+# Streamlit code to interact with the Flask app
+st.title('Car Price Prediction')
+st.write('Welcome to the Car Price Prediction app!')
+
+# Add more Streamlit code as needed to interact with your Flask app
