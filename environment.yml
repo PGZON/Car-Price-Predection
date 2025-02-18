@@ -2,8 +2,9 @@ name: car-price-predection
 dependencies:
   - python=3.8
   - flask
-  - scikit-learn=1.4.1.post1
+  - scikit-learn
   - pip
+  - streamlit
   - pip:
       - streamlit
       # ...other pip dependencies...
