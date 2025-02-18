@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: |
+        CONDA_NO_PLUGINS=true conda env update --file environment.yml --name base --no-plugins
+
+    - name: Run tests
+      run: |
+        source activate base
+        # Add your test commands here
