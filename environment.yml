@@ -1,13 +1,13 @@
-name: car-price-predection
-channels:
- what the `environment.yml` file might look like for a Python project:
-
-```yaml
-name: base
+name: car-price-prediction
 channels:
   - defaults
 dependencies:
-  - python=3.10
-  - flake8
-  - pytest
-  - any-other-dependencies
+  - python=3.8
+  - numpy
+  - pandas
+  - scikit-learn
+  - jupyter
+  - nodejs
+  - pip:
+      - flask
+      - flask-cors
