@@ -1,4 +1,3 @@
-import streamlit as st
 from flask import Flask, render_template, request, jsonify
 import pandas as pd
 import pickle as pk
@@ -67,9 +66,3 @@ def predict():
 
 if __name__ == '__main__':
     app.run(port=5002, debug=True)  # Change the port number to avoid conflicts and enable debug mode
-
-# Streamlit code to interact with the Flask app
-st.title('Car Price Prediction')
-st.write('Welcome to the Car Price Prediction app!')
-
-# Add more Streamlit code as needed to interact with your Flask app
